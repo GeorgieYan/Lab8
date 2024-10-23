@@ -76,6 +76,10 @@ public class CustomList extends ArrayAdapter<City> {
         return list;
     }
 
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+
     /**
      * get the size of the list
      * increase the list by adding a new city
