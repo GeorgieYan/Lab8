@@ -104,5 +104,15 @@ public class CustomList extends ArrayAdapter<City> {
         assertTrue(list.hasCity(city));
     }
 
+    @Test
+    public void testDeleteCity() {
+        City city = new City("Toronto", "ON");
+        list.addCity(city);
+        assertTrue(list.hasCity(city));
+
+        list.deleteCity(city);
+
+        assertFalse(list.hasCity(city));
+    }
 
 }
