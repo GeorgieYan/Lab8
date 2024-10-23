@@ -80,6 +80,11 @@ public class CustomList extends ArrayAdapter<City> {
         return cities.contains(city);
     }
 
+    public void deleteCity(City city) {
+        cities.remove(city);
+    }
+
+
     /**
      * get the size of the list
      * increase the list by adding a new city
