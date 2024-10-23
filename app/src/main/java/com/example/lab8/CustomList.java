@@ -120,4 +120,15 @@ public class CustomList extends ArrayAdapter<City> {
         assertFalse(list.hasCity(city));
     }
 
+    @Test
+    public void testCountCities() {
+        assertEquals(0, list.countCities());
+
+        list.addCity(new City("Edmonton", "AB"));
+        list.addCity(new City("Vancouver", "BC"));
+
+        assertEquals(2, list.countCities());
+    }
+
+
 }
