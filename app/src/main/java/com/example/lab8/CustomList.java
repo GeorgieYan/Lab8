@@ -1,6 +1,8 @@
 package com.example.lab8;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -87,5 +89,16 @@ public class CustomList extends ArrayAdapter<City> {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+
+    @Test
+    public void testHasCity() {
+        City city = new City("Calgary", "AB");
+        assertFalse(list.hasCity(city));
+
+        list.addCity(city);
+
+        assertTrue(list.hasCity(city));
+    }
+
 
 }
